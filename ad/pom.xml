@@ -1,0 +1,202 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.doorcii.ad</groupId>
+  <artifactId>ad</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>ad project</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+       <org.springframework.version>3.0.5.RELEASE</org.springframework.version>
+       <downloadSources>true</downloadSources>
+  </properties>
+  <modules>
+    <module>ad-client</module>
+    <module>ad-web</module>
+  </modules>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.4</version>
+        <scope>test</scope>
+      </dependency>
+
+       <!-- spring mvc  -->
+    
+     <dependency>  
+         <groupId>asm</groupId>  
+         <artifactId>asm-commons</artifactId>  
+         <version>2.2.3</version>  
+     </dependency>  
+     <dependency>  
+         <groupId>asm</groupId>  
+         <artifactId>asm</artifactId>  
+         <version>2.2.3</version>  
+     </dependency> 
+     <dependency>  
+         <groupId>com.oracle</groupId>  
+         <artifactId>ojdbc14</artifactId>  
+         <version>10.2.0.1.0</version>  
+     </dependency>    
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-expression</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-oxm</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc-portlet</artifactId>
+      <version>${org.springframework.version}</version>
+  </dependency>
+    
+    <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-ibatis</artifactId>
+    <version>2.0.8</version>
+  </dependency>
+    
+    <dependency>
+    <groupId>org.apache.ibatis</groupId>
+    <artifactId>ibatis-sqlmap</artifactId>
+    <version>2.3.4.726</version>
+  </dependency>
+            
+    <!-- log4j -->
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.9</version>
+    </dependency>
+    
+    <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+    <version>2.5</version>
+    <scope>provided</scope>
+  </dependency>
+    
+    <!-- velocity -->
+    <dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity</artifactId>
+    <version>1.7</version>
+  </dependency>
+     
+    <dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity-tools</artifactId>
+    <version>2.0</version>
+  </dependency>
+    
+    <dependency>  
+        <groupId>commons-logging</groupId>  
+        <artifactId>commons-logging</artifactId>  
+        <version>1.1.1</version>  
+    </dependency>  
+    
+    <!-- jdbc -->
+    <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.0.8</version>
+    <scope>compile</scope>
+  </dependency>
+    
+    <dependency>
+    <groupId>commons-dbcp</groupId>
+    <artifactId>commons-dbcp</artifactId>
+    <version>1.4</version>
+  </dependency>
+     
+    <dependency>       
+      <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.3.2</version>
+    </dependency>
+    
+    <dependency>  
+      <groupId>org.codehaus.jackson</groupId>  
+      <artifactId>jackson-core-asl</artifactId>  
+      <version>1.8.4</version>  
+  </dependency>  
+  <dependency>  
+      <groupId>org.codehaus.jackson</groupId>  
+      <artifactId>jackson-mapper-asl</artifactId>  
+      <version>1.8.4</version>  
+  </dependency>
+    
+    <dependency>
+    <groupId>org.codehaus.jackson</groupId>
+    <artifactId>jackson-mapper-asl</artifactId>
+    <version>1.9.13</version>
+  </dependency>
+    <dependency>
+    <groupId>org.codehaus.jackson</groupId>
+    <artifactId>jackson-core-asl</artifactId>
+    <version>1.9.13</version>
+  </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <finalName>ad</finalName>
+  </build>
+</project>
