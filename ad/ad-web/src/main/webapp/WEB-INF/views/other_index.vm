@@ -1,0 +1,4 @@
+#set($title="另一种设置布局方式")
+#set($layout="layout/default_layout.vm")
+
+另一种设置layout方式

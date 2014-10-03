@@ -1,0 +1,10 @@
+<html>
+    <head>
+		<title>$!{title}</title>
+	</head>
+	
+	<body>
+		default layout <br/>
+		$screen_content
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="ad">
+	<!--  
+	<typeAlias alias="talkDO" type="com.doorcii.apps.pojo.TalkShowDO" /> 
+	<resultMap id="apps.talkDO" class="talkDO" >
+		<result column="ID" property="id"/>
+		<result column="ITEM_TITLE" property="itemTitle"/>
+		<result column="ITEM_CONTENT" property="itemContent"/>
+		<result column="ITEM_LINK" property="itemLink"/>
+		<result column="GMT_CREATE" property="gmtCreate"/>
+		<result column="GMT_MODIFIED" property="gmtModified"/>
+		<result column="VERSION" property="version"/>
+		<result column="CREATOR" property="creator"/>
+		<result column="MODIFIER" property="modifier"/>
+		<result column="STATUS_FLAG" property="statusFlag"/>
+		<result column="STATU" property="status"/>
+		<result column="ATTACH_NEED_INDEX" property="attachNeedIndex"/>
+		<result column="ATTACH_NAME" property="attachName"/>
+		<result column="ATTACHMENT_URI" property="attachUri"/>
+		<result column="ATTACHMENT_UPLOADER" property="attachUploader"/>
+		<result column="ATTACHMENT_SIZE" property="attachSize"/>
+		<result column="TYPE" property="type"/>
+	</resultMap>
+	
+	
+	<sql id="apps.talk_columns">
+		ID,ITEM_TITLE,ITEM_CONTENT,ITEM_LINK,GMT_CREATE,GMT_MODIFIED,VERSION,CREATOR,MODIFIER,STATUS_FLAG,STATU,ATTACH_NEED_INDEX,ATTACH_NAME,ATTACHMENT_URI,ATTACHMENT_UPLOADER,ATTACHMENT_SIZE,TYPE
+	</sql>
+    <insert id="apps.insertTalkDO">
+		INSERT INTO TALK_SHOW(<include refid="apps.talk_columns"/>) 
+		VALUE(#id#,
+		#itemTitle#,
+		#itemContent#,
+		#itemLink#,
+		NOW(),
+		NOW(),
+		#version#,
+		#creator#,
+		#modifier#,
+		#statusFlag#,
+		#status#,
+		#attachNeedIndex#,
+		#attachName#,
+		#attachUri#,
+		#attachUploader#,
+		#attachSize#,
+		#type#
+		)
+		<selectKey resultClass="long" keyProperty="id">   
+             SELECT LAST_INSERT_ID() AS ID   
+        </selectKey>   
+    </insert>
+    
+    <select id="apps.queryTalkListByIds" resultMap="apps.talkDO">
+    	SELECT <include refid="apps.talk_columns"/> FROM TALK_SHOW
+    	WHERE STATU = 0 ORDER BY GMT_CREATE ASC LIMIT #startRow#,#pageSize#
+    </select>
+    
+    <select id="apps.queryByTitle" resultMap="apps.talkDO">
+    	SELECT <include refid="apps.talk_columns"/> FROM TALK_SHOW
+    	WHERE STATU = 0 AND ITEM_TITLE LIKE CONCAT('%',#title#,'%') 
+    	ORDER BY GMT_CREATE ASC LIMIT #startRow#,#pageSize#
+    </select>
+    
+    <delete id="apps.deleteTalkDO" >
+    	DELETE FROM TALK_SHOW WHERE ID=#id#
+    </delete>
+    -->
+    
+</sqlMap>
