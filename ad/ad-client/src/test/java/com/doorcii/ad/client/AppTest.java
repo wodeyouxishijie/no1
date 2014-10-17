@@ -1,5 +1,9 @@
 package com.doorcii.ad.client;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -35,4 +39,21 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    public void testhdfs() {
+    	InputStream is = null;
+    	try {
+    		is = new URL("hdfs://advnode.mna.myqcloud.com/test").openStream();
+    	} catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    	if(null != is) {
+    		try {
+				is.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+    	}
+    }
+    
 }

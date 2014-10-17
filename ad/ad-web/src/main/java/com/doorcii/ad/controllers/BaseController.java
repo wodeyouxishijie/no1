@@ -3,7 +3,7 @@ package com.doorcii.ad.controllers;
 import org.apache.log4j.Logger;
 
 /**
- * Controller »ùÀà
+ * Controller åŸºç±»
  * @author Jacky
  */
 public abstract class BaseController {

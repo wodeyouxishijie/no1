@@ -10,8 +10,7 @@ import org.springframework.web.servlet.view.velocity.VelocityLayoutView;
 import org.springframework.web.servlet.view.velocity.VelocityViewResolver;
 
 /**
- * 重写viewResovler
- * 用于配置自己的layout
+ * 瑙嗗浘瑙ｆ瀽
  * @author Jacky
  */
 public class VelocityMultipleLayoutViewResolver extends VelocityViewResolver {

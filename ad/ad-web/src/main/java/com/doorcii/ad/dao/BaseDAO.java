@@ -3,7 +3,7 @@ package com.doorcii.ad.dao;
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
 
 /**
- * DAO»ùÀà
+ * DAOæŠ½è±¡
  * @author Jacky
  */
 public abstract class BaseDAO extends SqlMapClientDaoSupport {
