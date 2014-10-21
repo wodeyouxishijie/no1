@@ -1,0 +1,9 @@
+/com/
+/ibatis-sqlmap.xml
+/jdbc.properties
+/log4j.xml
+/spring-application.xml
+/spring-dao.xml
+/spring-manager.xml
+/spring-servlet.xml
+/resource
